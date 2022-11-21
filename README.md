@@ -148,7 +148,7 @@ Location of the saved file is again:
 ## Postprocessing using Paraview
 Now it is time to explore the results! Firstly download open source post-processing app called [Paraview](https://www.paraview.org/download/) and install it. As it was said in the previous chapter, we need to firstly check created boundary conditions and imported model. To do that, search for 'model.vtu' file and open it using Paraview upper menu:
 > File\Open\
-![Model check](model_check.jpg)
+![Model check](model_check.JPG)
 After opening the 'model.vtu' zou have to click the 'Apply' button and after that you can browse through physical groups (boundary conditions and volumes) using 'Coloring' tab. All boundary conditions are shown below:
 ![Boundary conditions](boundary_conditions.JPG)
 
