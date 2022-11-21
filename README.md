@@ -26,18 +26,18 @@ Now with physical groups set, we could happily move to another step - meshing th
 > Gmsh Menu: Tools\Options\Mesh\General
 
 We set smoothing steps to '5' and element size factor to '0.05', other parameters stayed in default setup.
-![Mesh setup](meshsetup.jpg)
+![Mesh setup](meshsetup.JPG)
 
 Last but not least, we had to change mesh visibility as shown:
 > Gmsh Menu: Tools\Options\Mesh\Visibility
 
-![Mesh visibility](meshvisibility.jpg)
+![Mesh visibility](meshvisibility.JPG)
 
 And we are ready to mesh! Go to the right tree and select:
 > Modules\Mesh\3D
 
 Now you should see the meshed door:
-![Meshed door](mesheddoor.jpg)
+![Meshed door](mesheddoor.JPG)
 Other parameters, such as algorithm, boundary nodes or polynomical order can me changed in High-order tools:
 > Modules\Mesh\High/order tool
 
