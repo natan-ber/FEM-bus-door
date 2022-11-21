@@ -18,7 +18,7 @@ We created another boundary condition in the surface of bottom right circle. Fin
 We also have to separate the glass volume from the aluminium one. To do that, select Volume in the Tree Menu on the left side:
 > Modules\Geometry\Physical groups\Volume
 
-![Volume](volumedoor.jpg)
+![Volume](volumedoor.JPG)
 
 After creating the aluminium volume, we created the plexi-glass volume called 'glass' in a similar way by repeating the process and selecting second 'volume dot' in the middle.
 
