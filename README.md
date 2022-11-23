@@ -26,7 +26,7 @@ Now, with physical groups set, we can happily move to another step - meshing the
 > Gmsh Menu: Tools\Options\Mesh\General
 
 We set smoothing steps to '5' and element size factor to '0.05', other parameters stayed in default setup.
-![Mesh setup](meshsetup.jpg)
+![Mesh setup](mesh_setup.jpg)
 
 Last but not least, we had to change mesh visibility as shown:
 > Gmsh Menu: Tools\Options\Mesh\Visibility
