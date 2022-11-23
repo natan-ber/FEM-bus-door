@@ -148,16 +148,16 @@ Location of the saved file is again:
 ## Postprocessing using Paraview
 Now it is time to explore the results! Firstly download an open source post-processing app called [Paraview](https://www.paraview.org/download/) and install it. As it was said in the previous chapter, we need to firstly check created boundary conditions and imported the model. To do that, search for 'model.vtu' file and open it using Paraview upper menu:
 > File\Open\
-![Model check](modelcheck.JPG)
+![Model check](modelcheck.jpg)
 After opening the 'model.vtu' you have to click the 'Apply' button and after that you can browse through physical groups (boundary conditions and volumes) using 'Coloring' tab. All boundary conditions are shown below:
-![Boundary conditions](boundary_conditions.JPG)
+![Boundary conditions](boundary_conditions.jpg)
 
 After checking boundary conditions and running the Julia script in the previous part, we can finally move to reviewing our FEM analasys results. Import the 'results.vtu' file into Paraview the same way as 'model.vtu' file. To show the results, click on the eye next to the 'results.vtu' as shown below.
 
-![Results - deformations](results1.JPG)
+![Results - deformations](results1.jpg)
 
 Now we can go through the results in 'Coloring' tab. Selection of 'uh' show us total deformation which is 5 mm in the area of the handle. This verifies our calculation results. We can inspect the deformations in directions of x, y and z axis in the tab next to it (now selected 'Magnitude' option). The scale can be adjusted in the upper part as shown in the picture. We can countinue to review the results by going into 'sigma' and 'epsi' tabs that show us stress and strain.
-![Results - stress and strain](results2.JPG)
+![Results - stress and strain](results2.jpg)
 
 As you can see, the highest stress is 54 kPa which is way less than tensile yield strength of aluminium (276 MPa). The highest strain (the ratio of change in dimension to the original dimension) is 8.6e-7.
 
