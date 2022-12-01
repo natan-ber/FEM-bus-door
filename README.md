@@ -45,9 +45,9 @@ Save the mesh and you are ready for another step!
 > Gmsh Menu: File\Save Mesh
 
 ## FEM with Julia
-Now it is time to make FEM calculations using [Gridap](https://gridap.github.io/Tutorials/dev/pages/t003_elasticity/) library in Julia, where are also tutorials for working with FEM that have inspired us a lot.
+Now it is time to make FEM calculations using [Gridap](https://gridap.github.io/Tutorials/dev/pages/t003_elasticity/) package in Julia, where are also tutorials for working with FEM that have inspired us a lot.
 
-Firstly we have to import the meshed model into Julia. Gridap doesn't support .msh files and supports only .json files. Fortunately, there is a library 'GridapGmsh' that can handle the .msh format. Remember to set the right path for the file location.
+Firstly we have to import the meshed model into Julia. Gridap doesn't support .msh files and supports only .json files. Fortunately, there is a package 'GridapGmsh' that can handle the .msh format. Remember to set the right path for the file location.
 ```
 using Gridap
 using GridapGmsh
@@ -160,6 +160,14 @@ Now we can go through the results in 'Coloring' tab. Selection of 'uh' show us t
 ![Results - stress and strain](results2.jpg)
 
 As you can see, the highest stress is 54 kPa which is way less than tensile yield strength of aluminium (276 MPa). The highest strain (the ratio of change in dimension to the original dimension) is 8.6e-7.
+
+# Benchmarks
+The [BenchmarkTools.jl](https://github.com/JuliaCI/BenchmarkTools.jl) package was used to test the performance of the code. The first script 'benchmark_1.jl' uses the numerical solution to the problem mentioned above. The calculation of each variable took up to 5 seconds and the total memory used was 1.15 GiB, over 186 allocations.
+![Benchmark 1](benchmark_1.jpg)
+
+The second code 'benchmark_2.jl' contains a different numerical solver that allocates significantly less memory (6.16 MiB, over 9129 allocations) but takes considerably more time (135.036 s). The solver uses the [Preconditioners.jl](https://github.com/JuliaLinearAlgebra/Preconditioners.jl) package from [JuliaLinearAlgebra](https://github.com/JuliaLinearAlgebra).
+
+![Benchmark 2](benchmark_2.jpg)
 
 # Conclusion
 The goal of this work was to run FEM calculations of the bus door in Julia, including preprocessing and postprocessing in other open source software. Credits to [Gridap tutorials](https://www.paraview.org/download/), which helped to get the model working. Improvements can be made on the transition between the two materials. Also, the external force on the door was not described here.
