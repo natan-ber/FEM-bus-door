@@ -1,6 +1,6 @@
 using Gridap
 using GridapGmsh
-model = GmshDiscreteModel("bus_door.msh")
+model = GmshDiscreteModel("C:/.../bus_door.msh")
 writevtk(model,"model")
 
 using Gridap.Geometry
