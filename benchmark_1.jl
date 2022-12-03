@@ -1,5 +1,5 @@
 using Gridap, GridapGmsh, Gridap.Geometry, BenchmarkTools
-model = GmshDiscreteModel("C:/Users/Natan/Documents/CVUT/Athens/Github/bus_door.msh")
+model = GmshDiscreteModel("C:/.../bus_door.msh")
 # writevtk(model,"model")
 
 labels = get_face_labeling(model)
